@@ -15,7 +15,7 @@
 
 ## Executive Summary
 
-**JarryBank** is a modern Web3 portfolio management application that provides Avalanche users with real-time visibility into their token holdings, balances, and portfolio performance. Built as a serverless application on Next.js 14 with native Web3 wallet integration, JarryBank delivers a seamless, fast, and secure experience for crypto portfolio tracking without the complexity of traditional authentication systems.
+**JarryBank** is a modern Web3 portfolio management application that provides Avalanche users with real-time visibility into their token holdings, balances, and portfolio performance. Built as a serverless application on Next.js 15.4 with native Web3 wallet integration, JarryBank delivers a seamless, fast, and secure experience for crypto portfolio tracking without the complexity of traditional authentication systems.
 
 **Key Value Proposition:** Enable Avalanche users to instantly view and track their complete token portfolio through a simple wallet connection, with real-time price data and portfolio analytics.
 
@@ -87,9 +87,42 @@
 
 ## User Stories & Requirements
 
-### Epic 1: Wallet Connection & Authentication
+### Epic 1: Project Foundation & Setup
 
-#### Story 1.1: Connect Web3 Wallet
+#### Story 1.1: Project Scaffolding & Infrastructure Setup
+**As a** developer  
+**I want to** establish the foundational project structure and infrastructure  
+**So that** I can build JarryBank features on a solid technical foundation
+
+**Priority**: P0 (Critical)
+
+**Acceptance Criteria**:
+- [ ] Next.js 15.4 project initialized with TypeScript and App Router
+- [ ] Tailwind CSS 4.0 and shadcn/ui component system configured
+- [ ] Project folder structure established (components, pages, lib, types)
+- [ ] ESLint, Prettier, and TypeScript configuration files set up
+- [ ] Vercel deployment configuration and environment setup
+- [ ] Basic package.json with all required dependencies
+- [ ] Git repository initialized with appropriate .gitignore
+- [ ] Development and build scripts functional (npm run dev, npm run build)
+
+#### Story 1.2: Basic UI Layout & Landing Page
+**As a** user visiting JarryBank  
+**I want to** see a professional landing page with clear branding  
+**So that** I understand what JarryBank offers and how to get started
+
+**Priority**: P0 (Critical)
+
+**Acceptance Criteria**:
+- [ ] Clean, responsive landing page with JarryBank branding
+- [ ] Clear value proposition and call-to-action messaging
+- [ ] Navigation header with logo and main navigation items
+- [ ] Footer with basic links and information
+- [ ] Mobile-responsive design across all viewport sizes
+- [ ] Loading properly on development server (npm run dev)
+- [ ] Basic SEO meta tags and favicon configured
+
+#### Story 1.3: Connect Web3 Wallet
 **As a** crypto user  
 **I want to** connect my Web3 wallet to JarryBank  
 **So that** I can view my token portfolio without creating accounts or passwords
@@ -97,15 +130,17 @@
 **Priority**: P0 (Critical)
 
 **Acceptance Criteria**:
-- [ ] User can click "Connect Wallet" button on landing page
+- [ ] RainbowKit and Wagmi 2.16+ integration configured
+- [ ] "Connect Wallet" button prominently displayed on landing page
 - [ ] System supports MetaMask, WalletConnect, and major wallet providers via RainbowKit
+- [ ] Smart contract wallet support (Coinbase Smart Wallet, Argent)
 - [ ] Connection process completes in < 5 seconds
 - [ ] User sees their wallet address displayed after successful connection
 - [ ] User can switch between multiple connected accounts
 - [ ] System displays clear error messages for connection failures
 - [ ] Connection persists across browser sessions until explicitly disconnected
 
-#### Story 1.2: Wallet Network Validation
+#### Story 1.4: Wallet Network Validation
 **As a** user connecting my wallet  
 **I want to** be guided to the correct network  
 **So that** I can view my Avalanche assets accurately
@@ -372,12 +407,12 @@
 ### Frontend Requirements
 
 #### Core Technology Stack
-- **Framework**: Next.js 14 with App Router for optimal performance
-- **Language**: TypeScript 5.6+ for type safety
+- **Framework**: Next.js 15.4 with App Router for optimal performance
+- **Language**: TypeScript 5.9+ for type safety
 - **Styling**: Tailwind CSS 4.0 with shadcn/ui component system
 - **State Management**: Zustand for lightweight state management
-- **Web3 Integration**: Wagmi 2.12+ with Viem 2.21+ for blockchain interaction
-- **Wallet Connection**: RainbowKit 2.2+ for wallet UI and UX
+- **Web3 Integration**: Wagmi 2.16+ with Viem 2.21+ for blockchain interaction
+- **Wallet Connection**: RainbowKit (latest) with smart contract wallet support
 
 #### Performance Requirements
 - **Bundle Size**: <500KB initial bundle, <1MB total JavaScript
