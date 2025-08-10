@@ -1,0 +1,69 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+.yarn/
+
+# Production builds
+.next/
+out/
+dist/
+build/
+
+# Development
+.turbo/
+.env*.local
+.env.development
+.env.production
+
+# Logs
+*.log
+logs
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Runtime data
+lib-cov
+coverage/
+nyc_output/
+.grunt
+.lock-wscript
+
+# Optional npm cache directory
+.npm
+.cache/
+
+# Optional eslint cache
+.eslintcache
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+
+# Package manager lockfiles (we use pnpm)
+package-lock.json
+yarn.lock
+
+# Vercel
+.vercel
+
+# Documentation
+docs/.ignore/
